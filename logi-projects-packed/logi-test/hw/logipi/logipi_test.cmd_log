@@ -1,0 +1,20 @@
+xst -intstyle ise -ifn "C:/Users/luizh/Documents/GitHub/logi-projects-packed-master/logi-test/hw/logipi/logipi_test.xst" -ofn "C:/Users/luizh/Documents/GitHub/logi-projects-packed-master/logi-test/hw/logipi/logipi_test.syr" 
+xst -intstyle ise -ifn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.xst" -ofn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.syr" 
+xst -intstyle ise -ifn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.xst" -ofn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.syr" 
+xst -intstyle ise -ifn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.xst" -ofn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.syr" 
+xst -intstyle ise -ifn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.xst" -ofn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc remote_sources/_/hdl/logipi_ra3.ucf -p xc6slx9-tqg144-2 logipi_test.ngc logipi_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o logipi_test_map.ncd logipi_test.ngd logipi_test.pcf 
+par -w -intstyle ise -ol high -mt off logipi_test_map.ncd logipi_test.ncd logipi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml logipi_test.twx logipi_test.ncd -o logipi_test.twr logipi_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc remote_sources/_/hdl/logipi_ra3.ucf -p xc6slx9-tqg144-2 logipi_test.ngc logipi_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o logipi_test_map.ncd logipi_test.ngd logipi_test.pcf 
+par -w -intstyle ise -ol high -mt off logipi_test_map.ncd logipi_test.ncd logipi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml logipi_test.twx logipi_test.ncd -o logipi_test.twr logipi_test.pcf 
+bitgen -intstyle ise -f logipi_test.ut logipi_test.ncd 
+xst -intstyle ise -ifn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.xst" -ofn "C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/logipi_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc remote_sources/_/hdl/logipi_ra3.ucf -p xc6slx9-tqg144-2 logipi_test.ngc logipi_test.ngd  
+map -intstyle ise -p xc6slx9-tqg144-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o logipi_test_map.ncd logipi_test.ngd logipi_test.pcf 
+par -w -intstyle ise -ol high -mt off logipi_test_map.ncd logipi_test.ncd logipi_test.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml logipi_test.twx logipi_test.ncd -o logipi_test.twr logipi_test.pcf 
+bitgen -intstyle ise -f logipi_test.ut logipi_test.ncd 

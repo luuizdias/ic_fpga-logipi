@@ -1,0 +1,33 @@
+# Compiled Bitstreams
+*.bit
+
+# Xilinx generated files
+*.prj 
+*.xst   
+*.xwbt 
+*.html 
+*.gise 
+*.xreport 
+*.asy 
+*.sym 
+*.vho 
+*.xdc 
+*.ncf 
+*.ncd 
+*.log 
+*.tcl 
+*.cgp 
+*.tcl 
+*.out 
+*.wdb
+*/tmp/* 
+*/clock_gen/*  
+*/_xmsgs/*   
+*/iseconfig/*  
+*/ipcore_dir/*.txt   
+*.cmd_log
+*.syr
+*.xmsgs
+*.vho
+*.bat
+

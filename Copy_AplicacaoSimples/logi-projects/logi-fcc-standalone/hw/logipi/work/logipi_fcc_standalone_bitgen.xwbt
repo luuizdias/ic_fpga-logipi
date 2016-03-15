@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=H:\Dropbox\1LOGI\1LOGI_SRC\1logi-github\1LOGI-REPO\Logi-projects\logi-fcc-standalone\hw\logipi\work\logipi_fcc_standalone.ncd
+OUTFILE=H:\Dropbox\1LOGI\1LOGI_SRC\1logi-github\1LOGI-REPO\Logi-projects\logi-fcc-standalone\hw\logipi\work\logipi_fcc_standalone.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=H:\Dropbox\1LOGI\1LOGI_SRC\1logi-github\1LOGI-REPO\Logi-projects\logi-fcc-standalone\hw\logipi\work
+LICENSE=WebPack
+USER_INFO=202672454_0_0_477

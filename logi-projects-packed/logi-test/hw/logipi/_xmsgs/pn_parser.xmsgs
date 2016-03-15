@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/hard-cv/hw/rtl/primitive/dpram_NxN.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/hard-cv/hw/rtl/primitive/primitive_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/utils/logi_utils_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/logi_wishbone_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/peripherals/logi_wishbone_peripherals_pack.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/peripherals/wishbone_gpio.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/peripherals/wishbone_mem.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/peripherals/wishbone_register.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/spi_wishbone_wrapper.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/_/_/_/logi-hard/wishbone/wishbone_intercon.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/common/Memory_tester.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/_/common/SDRAM_Controller.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/luizh/Documents/GitHub/logi-projects-packed/logi-test/hw/logipi/remote_sources/_/hdl/logipi_test.vhd&quot; into library work</arg>
+</msg>
+
+</messages>
+

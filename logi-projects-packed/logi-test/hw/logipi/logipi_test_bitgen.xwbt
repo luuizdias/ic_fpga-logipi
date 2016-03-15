@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\luizh\Documents\GitHub\logi-projects-packed\logi-test\hw\logipi\logipi_test.ncd
+OUTFILE=C:\Users\luizh\Documents\GitHub\logi-projects-packed\logi-test\hw\logipi\logipi_test.bit
+FAMILY=Spartan6
+PART=xc6slx9-2tqg144
+WORKINGDIR=C:\Users\luizh\Documents\GitHub\logi-projects-packed\logi-test\hw\logipi
+LICENSE=WebPack
+USER_INFO=211069910_0_0_619

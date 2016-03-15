@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Mon Nov 23 13:53:04 2015
+
+drc -z logipi_test.ncd logipi_test.pcf
+
+DRC detected 0 errors and 0 warnings.
