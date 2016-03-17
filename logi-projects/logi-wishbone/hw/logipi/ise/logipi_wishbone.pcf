@@ -1,0 +1,812 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Mar 17 09:53:17 2016
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "OSC_FPGA" LOCATE = SITE "P85" LEVEL 1;
+COMP "SYS_SDA" LOCATE = SITE "P98" LEVEL 1;
+COMP "SYS_SCL" LOCATE = SITE "P97" LEVEL 1;
+COMP "PB<0>" LOCATE = SITE "P102" LEVEL 1;
+COMP "PB<1>" LOCATE = SITE "P101" LEVEL 1;
+COMP "SYS_SPI_SCK" LOCATE = SITE "P70" LEVEL 1;
+PIN SYS_SPI_SCK_pin<0> = BEL "SYS_SPI_SCK" PINNAME PAD;
+PIN "SYS_SPI_SCK_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "LED<0>" LOCATE = SITE "P105" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P104" LEVEL 1;
+COMP "SYS_SPI_MISO" LOCATE = SITE "P75" LEVEL 1;
+COMP "SYS_SPI_MOSI" LOCATE = SITE "P65" LEVEL 1;
+COMP "PMOD1<0>" LOCATE = SITE "P5" LEVEL 1;
+COMP "PMOD1<1>" LOCATE = SITE "P2" LEVEL 1;
+COMP "PMOD1<2>" LOCATE = SITE "P1" LEVEL 1;
+COMP "PMOD1<3>" LOCATE = SITE "P16" LEVEL 1;
+COMP "PMOD1<4>" LOCATE = SITE "P88" LEVEL 1;
+COMP "PMOD2<0>" LOCATE = SITE "P142" LEVEL 1;
+COMP "PMOD1<5>" LOCATE = SITE "P92" LEVEL 1;
+COMP "PMOD2<1>" LOCATE = SITE "P141" LEVEL 1;
+COMP "PMOD1<6>" LOCATE = SITE "P93" LEVEL 1;
+COMP "PMOD2<2>" LOCATE = SITE "P15" LEVEL 1;
+COMP "PMOD1<7>" LOCATE = SITE "P94" LEVEL 1;
+COMP "PMOD2<3>" LOCATE = SITE "P14" LEVEL 1;
+COMP "PMOD3<0>" LOCATE = SITE "P138" LEVEL 1;
+COMP "PMOD2<4>" LOCATE = SITE "P144" LEVEL 1;
+COMP "PMOD3<1>" LOCATE = SITE "P137" LEVEL 1;
+COMP "PMOD2<5>" LOCATE = SITE "P143" LEVEL 1;
+COMP "PMOD3<2>" LOCATE = SITE "P124" LEVEL 1;
+COMP "PMOD2<6>" LOCATE = SITE "P140" LEVEL 1;
+COMP "PMOD3<3>" LOCATE = SITE "P123" LEVEL 1;
+COMP "PMOD2<7>" LOCATE = SITE "P139" LEVEL 1;
+COMP "PMOD4<0>" LOCATE = SITE "P112" LEVEL 1;
+COMP "PMOD3<4>" LOCATE = SITE "P119" LEVEL 1;
+COMP "PMOD4<1>" LOCATE = SITE "P111" LEVEL 1;
+COMP "PMOD3<5>" LOCATE = SITE "P118" LEVEL 1;
+COMP "PMOD4<2>" LOCATE = SITE "P132" LEVEL 1;
+COMP "PMOD3<6>" LOCATE = SITE "P117" LEVEL 1;
+COMP "PMOD4<3>" LOCATE = SITE "P131" LEVEL 1;
+COMP "PMOD3<7>" LOCATE = SITE "P116" LEVEL 1;
+COMP "PMOD4<4>" LOCATE = SITE "P115" LEVEL 1;
+COMP "PMOD4<5>" LOCATE = SITE "P114" LEVEL 1;
+COMP "PMOD4<6>" LOCATE = SITE "P134" LEVEL 1;
+COMP "PMOD4<7>" LOCATE = SITE "P133" LEVEL 1;
+COMP "RP_SPI_CE0N" LOCATE = SITE "P79" LEVEL 1;
+TIMEGRP clk32_grp = BEL "mem_interface0/data_confn" BEL
+        "mem_interface0/data_byte" BEL "mem_interface0/wr_latched" BEL
+        "mem_interface0/rd_latched" BEL "mem_interface0/data_in_sr_0" BEL
+        "mem_interface0/data_in_sr_1" BEL "mem_interface0/data_in_sr_2" BEL
+        "mem_interface0/data_in_sr_3" BEL "mem_interface0/data_in_sr_4" BEL
+        "mem_interface0/data_in_sr_5" BEL "mem_interface0/data_in_sr_6" BEL
+        "mem_interface0/data_in_sr_7" BEL "mem_interface0/data_in_sr_8" BEL
+        "mem_interface0/data_in_sr_9" BEL "mem_interface0/data_in_sr_10" BEL
+        "mem_interface0/data_in_sr_11" BEL "mem_interface0/data_in_sr_12" BEL
+        "mem_interface0/data_in_sr_13" BEL "mem_interface0/data_in_sr_14" BEL
+        "mem_interface0/data_out_sr_1" BEL "mem_interface0/data_out_sr_2" BEL
+        "mem_interface0/data_out_sr_3" BEL "mem_interface0/data_out_sr_4" BEL
+        "mem_interface0/data_out_sr_5" BEL "mem_interface0/data_out_sr_6" BEL
+        "mem_interface0/data_out_sr_7" BEL "mem_interface0/data_out_sr_8" BEL
+        "mem_interface0/data_out_sr_9" BEL "mem_interface0/data_out_sr_10" BEL
+        "mem_interface0/data_out_sr_11" BEL "mem_interface0/data_out_sr_12"
+        BEL "mem_interface0/data_out_sr_13" BEL
+        "mem_interface0/data_out_sr_14" BEL "mem_interface0/data_out_sr_15"
+        BEL "mem_interface0/rd_wrn" BEL "mem_interface0/data_in_latched_0" BEL
+        "mem_interface0/data_in_latched_1" BEL
+        "mem_interface0/data_in_latched_2" BEL
+        "mem_interface0/data_in_latched_3" BEL
+        "mem_interface0/data_in_latched_4" BEL
+        "mem_interface0/data_in_latched_5" BEL
+        "mem_interface0/data_in_latched_6" BEL
+        "mem_interface0/data_in_latched_7" BEL
+        "mem_interface0/data_in_latched_8" BEL
+        "mem_interface0/data_in_latched_9" BEL
+        "mem_interface0/data_in_latched_10" BEL
+        "mem_interface0/data_in_latched_11" BEL
+        "mem_interface0/data_in_latched_12" BEL
+        "mem_interface0/data_in_latched_13" BEL
+        "mem_interface0/data_in_latched_14" BEL
+        "mem_interface0/data_in_latched_15" BEL "mem_interface0/auto_inc" BEL
+        "mem_interface0/addr_bus_latched_0" BEL
+        "mem_interface0/addr_bus_latched_1" BEL
+        "mem_interface0/addr_bus_latched_2" BEL
+        "mem_interface0/addr_bus_latched_3" BEL
+        "mem_interface0/addr_bus_latched_4" BEL
+        "mem_interface0/addr_bus_latched_5" BEL
+        "mem_interface0/addr_bus_latched_6" BEL
+        "mem_interface0/addr_bus_latched_7" BEL
+        "mem_interface0/addr_bus_latched_8" BEL
+        "mem_interface0/addr_bus_latched_9" BEL
+        "mem_interface0/addr_bus_latched_10" BEL
+        "mem_interface0/addr_bus_latched_11" BEL
+        "mem_interface0/addr_bus_latched_12" BEL
+        "mem_interface0/addr_bus_latched_13" BEL
+        "mem_interface0/addr_bus_latched_14" BEL
+        "mem_interface0/addr_bus_latched_15" BEL "mem_interface0/bit_count_0"
+        BEL "mem_interface0/bit_count_1" BEL "mem_interface0/bit_count_2" BEL
+        "mem_interface0/bit_count_3" BEL "mem_interface0/addr_bus_latched_2_1"
+        BEL "mem_interface0/addr_bus_latched_3_1" BEL
+        "mem_interface0/addr_bus_latched_4_1" BEL
+        "mem_interface0/addr_bus_latched_5_1" BEL
+        "mem_interface0/addr_bus_latched_7_1" BEL "SYS_SPI_SCK_BUFGP/BUFG";
+TIMEGRP clk_100Mhz_pll = BEL "mem_interface0/strobe" BEL
+        "mem_interface0/write" BEL "mem_0/ram0/spo_0" BEL "mem_0/ram0/spo_1"
+        BEL "mem_0/ram0/spo_2" BEL "mem_0/ram0/spo_3" BEL "mem_0/ram0/spo_4"
+        BEL "mem_0/ram0/spo_5" BEL "mem_0/ram0/spo_6" BEL "mem_0/ram0/spo_7"
+        BEL "mem_0/ram0/spo_8" BEL "mem_0/ram0/spo_9" BEL "mem_0/ram0/spo_10"
+        BEL "mem_0/ram0/spo_11" BEL "mem_0/ram0/spo_12" BEL
+        "mem_0/ram0/spo_13" BEL "mem_0/ram0/spo_14" BEL "mem_0/ram0/spo_15"
+        BEL "BUFG_2" BEL "register0/wbs_readdata_15" BEL
+        "register0/wbs_readdata_14" BEL "register0/wbs_readdata_13" BEL
+        "register0/wbs_readdata_12" BEL "register0/wbs_readdata_11" BEL
+        "register0/wbs_readdata_10" BEL "register0/wbs_readdata_9" BEL
+        "register0/wbs_readdata_8" BEL "register0/wbs_readdata_7" BEL
+        "register0/wbs_readdata_6" BEL "register0/wbs_readdata_5" BEL
+        "register0/wbs_readdata_4" BEL "register0/wbs_readdata_3" BEL
+        "register0/wbs_readdata_2" BEL "register0/wbs_readdata_1" BEL
+        "register0/wbs_readdata_0" BEL "register0/reg_in_d_3_15" BEL
+        "register0/reg_in_d_3_14" BEL "register0/reg_in_d_3_13" BEL
+        "register0/reg_in_d_3_12" BEL "register0/reg_in_d_3_11" BEL
+        "register0/reg_in_d_3_10" BEL "register0/reg_in_d_3_9" BEL
+        "register0/reg_in_d_3_8" BEL "register0/reg_in_d_3_7" BEL
+        "register0/reg_in_d_3_6" BEL "register0/reg_in_d_3_5" BEL
+        "register0/reg_in_d_3_4" BEL "register0/reg_in_d_3_3" BEL
+        "register0/reg_in_d_3_2" BEL "register0/reg_in_d_3_1" BEL
+        "register0/reg_in_d_3_0" BEL "register0/reg_in_d_2_15" BEL
+        "register0/reg_in_d_2_14" BEL "register0/reg_in_d_2_13" BEL
+        "register0/reg_in_d_2_12" BEL "register0/reg_in_d_2_11" BEL
+        "register0/reg_in_d_2_10" BEL "register0/reg_in_d_2_9" BEL
+        "register0/reg_in_d_2_8" BEL "register0/reg_in_d_2_7" BEL
+        "register0/reg_in_d_2_6" BEL "register0/reg_in_d_2_5" BEL
+        "register0/reg_in_d_2_4" BEL "register0/reg_in_d_2_3" BEL
+        "register0/reg_in_d_2_2" BEL "register0/reg_in_d_2_1" BEL
+        "register0/reg_in_d_2_0" BEL "register0/reg_in_d_1_15" BEL
+        "register0/reg_in_d_1_14" BEL "register0/reg_in_d_1_13" BEL
+        "register0/reg_in_d_1_12" BEL "register0/reg_in_d_1_11" BEL
+        "register0/reg_in_d_1_10" BEL "register0/reg_in_d_1_9" BEL
+        "register0/reg_in_d_1_8" BEL "register0/reg_in_d_1_7" BEL
+        "register0/reg_in_d_1_6" BEL "register0/reg_in_d_1_5" BEL
+        "register0/reg_in_d_1_4" BEL "register0/reg_in_d_1_3" BEL
+        "register0/reg_in_d_1_2" BEL "register0/reg_in_d_1_1" BEL
+        "register0/reg_in_d_1_0" BEL "register0/reg_in_d_0_15" BEL
+        "register0/reg_in_d_0_14" BEL "register0/reg_in_d_0_13" BEL
+        "register0/reg_in_d_0_12" BEL "register0/reg_in_d_0_11" BEL
+        "register0/reg_in_d_0_10" BEL "register0/reg_in_d_0_9" BEL
+        "register0/reg_in_d_0_8" BEL "register0/reg_in_d_0_7" BEL
+        "register0/reg_in_d_0_6" BEL "register0/reg_in_d_0_5" BEL
+        "register0/reg_in_d_0_4" BEL "register0/reg_in_d_0_3" BEL
+        "register0/reg_in_d_0_2" BEL "register0/reg_in_d_0_1" BEL
+        "register0/reg_in_d_0_0" BEL "register0/reg_out_d_0_15" BEL
+        "register0/reg_out_d_0_14" BEL "register0/reg_out_d_0_13" BEL
+        "register0/reg_out_d_0_12" BEL "register0/reg_out_d_0_11" BEL
+        "register0/reg_out_d_0_10" BEL "register0/reg_out_d_0_9" BEL
+        "register0/reg_out_d_0_8" BEL "register0/reg_out_d_0_7" BEL
+        "register0/reg_out_d_0_6" BEL "register0/reg_out_d_0_5" BEL
+        "register0/reg_out_d_0_4" BEL "register0/reg_out_d_0_3" BEL
+        "register0/reg_out_d_0_2" BEL "register0/reg_out_d_0_1" BEL
+        "register0/reg_out_d_0_0" BEL "register0/reg_out_d_2_15" BEL
+        "register0/reg_out_d_2_14" BEL "register0/reg_out_d_2_13" BEL
+        "register0/reg_out_d_2_12" BEL "register0/reg_out_d_2_11" BEL
+        "register0/reg_out_d_2_10" BEL "register0/reg_out_d_2_9" BEL
+        "register0/reg_out_d_2_8" BEL "register0/reg_out_d_2_7" BEL
+        "register0/reg_out_d_2_6" BEL "register0/reg_out_d_2_5" BEL
+        "register0/reg_out_d_2_4" BEL "register0/reg_out_d_2_3" BEL
+        "register0/reg_out_d_2_2" BEL "register0/reg_out_d_2_1" BEL
+        "register0/reg_out_d_2_0" BEL "register0/reg_out_d_1_15" BEL
+        "register0/reg_out_d_1_14" BEL "register0/reg_out_d_1_13" BEL
+        "register0/reg_out_d_1_12" BEL "register0/reg_out_d_1_11" BEL
+        "register0/reg_out_d_1_10" BEL "register0/reg_out_d_1_9" BEL
+        "register0/reg_out_d_1_8" BEL "register0/reg_out_d_1_7" BEL
+        "register0/reg_out_d_1_6" BEL "register0/reg_out_d_1_5" BEL
+        "register0/reg_out_d_1_4" BEL "register0/reg_out_d_1_3" BEL
+        "register0/reg_out_d_1_2" BEL "register0/reg_out_d_1_1" BEL
+        "register0/reg_out_d_1_0" BEL "register0/reg_out_d_3_15" BEL
+        "register0/reg_out_d_3_14" BEL "register0/reg_out_d_3_13" BEL
+        "register0/reg_out_d_3_12" BEL "register0/reg_out_d_3_11" BEL
+        "register0/reg_out_d_3_10" BEL "register0/reg_out_d_3_9" BEL
+        "register0/reg_out_d_3_8" BEL "register0/reg_out_d_3_7" BEL
+        "register0/reg_out_d_3_6" BEL "register0/reg_out_d_3_5" BEL
+        "register0/reg_out_d_3_4" BEL "register0/reg_out_d_3_3" BEL
+        "register0/reg_out_d_3_2" BEL "register0/reg_out_d_3_1" BEL
+        "register0/reg_out_d_3_0" BEL "pwm0/wbs_readdata_15" BEL
+        "pwm0/wbs_readdata_14" BEL "pwm0/wbs_readdata_13" BEL
+        "pwm0/wbs_readdata_12" BEL "pwm0/wbs_readdata_11" BEL
+        "pwm0/wbs_readdata_10" BEL "pwm0/wbs_readdata_9" BEL
+        "pwm0/wbs_readdata_8" BEL "pwm0/wbs_readdata_7" BEL
+        "pwm0/wbs_readdata_6" BEL "pwm0/wbs_readdata_5" BEL
+        "pwm0/wbs_readdata_4" BEL "pwm0/wbs_readdata_3" BEL
+        "pwm0/wbs_readdata_2" BEL "pwm0/wbs_readdata_1" BEL
+        "pwm0/wbs_readdata_0" BEL "pwm0/pwm_regs_4_15" BEL
+        "pwm0/pwm_regs_4_14" BEL "pwm0/pwm_regs_4_13" BEL "pwm0/pwm_regs_4_12"
+        BEL "pwm0/pwm_regs_4_11" BEL "pwm0/pwm_regs_4_10" BEL
+        "pwm0/pwm_regs_4_9" BEL "pwm0/pwm_regs_4_8" BEL "pwm0/pwm_regs_4_7"
+        BEL "pwm0/pwm_regs_4_6" BEL "pwm0/pwm_regs_4_5" BEL
+        "pwm0/pwm_regs_4_4" BEL "pwm0/pwm_regs_4_3" BEL "pwm0/pwm_regs_4_2"
+        BEL "pwm0/pwm_regs_4_1" BEL "pwm0/pwm_regs_4_0" BEL
+        "pwm0/pwm_regs_3_15" BEL "pwm0/pwm_regs_3_14" BEL "pwm0/pwm_regs_3_13"
+        BEL "pwm0/pwm_regs_3_12" BEL "pwm0/pwm_regs_3_11" BEL
+        "pwm0/pwm_regs_3_10" BEL "pwm0/pwm_regs_3_9" BEL "pwm0/pwm_regs_3_8"
+        BEL "pwm0/pwm_regs_3_7" BEL "pwm0/pwm_regs_3_6" BEL
+        "pwm0/pwm_regs_3_5" BEL "pwm0/pwm_regs_3_4" BEL "pwm0/pwm_regs_3_3"
+        BEL "pwm0/pwm_regs_3_2" BEL "pwm0/pwm_regs_3_1" BEL
+        "pwm0/pwm_regs_3_0" BEL "pwm0/pwm_regs_1_15" BEL "pwm0/pwm_regs_1_14"
+        BEL "pwm0/pwm_regs_1_13" BEL "pwm0/pwm_regs_1_12" BEL
+        "pwm0/pwm_regs_1_11" BEL "pwm0/pwm_regs_1_10" BEL "pwm0/pwm_regs_1_9"
+        BEL "pwm0/pwm_regs_1_8" BEL "pwm0/pwm_regs_1_7" BEL
+        "pwm0/pwm_regs_1_6" BEL "pwm0/pwm_regs_1_5" BEL "pwm0/pwm_regs_1_4"
+        BEL "pwm0/pwm_regs_1_3" BEL "pwm0/pwm_regs_1_2" BEL
+        "pwm0/pwm_regs_1_1" BEL "pwm0/pwm_regs_1_0" BEL "pwm0/pwm_regs_0_15"
+        BEL "pwm0/pwm_regs_0_14" BEL "pwm0/pwm_regs_0_13" BEL
+        "pwm0/pwm_regs_0_12" BEL "pwm0/pwm_regs_0_11" BEL "pwm0/pwm_regs_0_10"
+        BEL "pwm0/pwm_regs_0_9" BEL "pwm0/pwm_regs_0_8" BEL
+        "pwm0/pwm_regs_0_7" BEL "pwm0/pwm_regs_0_6" BEL "pwm0/pwm_regs_0_5"
+        BEL "pwm0/pwm_regs_0_4" BEL "pwm0/pwm_regs_0_3" BEL
+        "pwm0/pwm_regs_0_2" BEL "pwm0/pwm_regs_0_1" BEL "pwm0/pwm_regs_0_0"
+        BEL "pwm0/pwm_regs_2_15" BEL "pwm0/pwm_regs_2_14" BEL
+        "pwm0/pwm_regs_2_13" BEL "pwm0/pwm_regs_2_12" BEL "pwm0/pwm_regs_2_11"
+        BEL "pwm0/pwm_regs_2_10" BEL "pwm0/pwm_regs_2_9" BEL
+        "pwm0/pwm_regs_2_8" BEL "pwm0/pwm_regs_2_7" BEL "pwm0/pwm_regs_2_6"
+        BEL "pwm0/pwm_regs_2_5" BEL "pwm0/pwm_regs_2_4" BEL
+        "pwm0/pwm_regs_2_3" BEL "pwm0/pwm_regs_2_2" BEL "pwm0/pwm_regs_2_1"
+        BEL "pwm0/pwm_regs_2_0" BEL "pwm0/pwm_ctrl/period_counter_15" BEL
+        "pwm0/pwm_ctrl/period_counter_14" BEL
+        "pwm0/pwm_ctrl/period_counter_13" BEL
+        "pwm0/pwm_ctrl/period_counter_12" BEL
+        "pwm0/pwm_ctrl/period_counter_11" BEL
+        "pwm0/pwm_ctrl/period_counter_10" BEL "pwm0/pwm_ctrl/period_counter_9"
+        BEL "pwm0/pwm_ctrl/period_counter_8" BEL
+        "pwm0/pwm_ctrl/period_counter_7" BEL "pwm0/pwm_ctrl/period_counter_6"
+        BEL "pwm0/pwm_ctrl/period_counter_5" BEL
+        "pwm0/pwm_ctrl/period_counter_4" BEL "pwm0/pwm_ctrl/period_counter_3"
+        BEL "pwm0/pwm_ctrl/period_counter_2" BEL
+        "pwm0/pwm_ctrl/period_counter_1" BEL "pwm0/pwm_ctrl/period_counter_0"
+        BEL "pwm0/pwm_ctrl/divider_counter_15" BEL
+        "pwm0/pwm_ctrl/divider_counter_14" BEL
+        "pwm0/pwm_ctrl/divider_counter_13" BEL
+        "pwm0/pwm_ctrl/divider_counter_12" BEL
+        "pwm0/pwm_ctrl/divider_counter_11" BEL
+        "pwm0/pwm_ctrl/divider_counter_10" BEL
+        "pwm0/pwm_ctrl/divider_counter_9" BEL
+        "pwm0/pwm_ctrl/divider_counter_8" BEL
+        "pwm0/pwm_ctrl/divider_counter_7" BEL
+        "pwm0/pwm_ctrl/divider_counter_6" BEL
+        "pwm0/pwm_ctrl/divider_counter_5" BEL
+        "pwm0/pwm_ctrl/divider_counter_4" BEL
+        "pwm0/pwm_ctrl/divider_counter_3" BEL
+        "pwm0/pwm_ctrl/divider_counter_2" BEL
+        "pwm0/pwm_ctrl/divider_counter_1" BEL
+        "pwm0/pwm_ctrl/divider_counter_0" BEL "pwm0/pwm_ctrl/pwm_1" BEL
+        "pwm0/pwm_ctrl/pwm_0" BEL "pwm0/pwm_ctrl/pulse_width_q_1_15" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_14" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_13" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_12" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_11" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_10" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_9" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_8" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_7" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_6" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_5" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_4" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_3" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_2" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_1" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_1_0" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_15" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_14" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_13" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_12" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_11" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_10" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_9" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_8" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_7" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_6" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_5" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_4" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_3" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_2" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_1" BEL
+        "pwm0/pwm_ctrl/pulse_width_q_0_0" BEL "pwm0/pwm_ctrl/period_q_15" BEL
+        "pwm0/pwm_ctrl/period_q_14" BEL "pwm0/pwm_ctrl/period_q_13" BEL
+        "pwm0/pwm_ctrl/period_q_12" BEL "pwm0/pwm_ctrl/period_q_11" BEL
+        "pwm0/pwm_ctrl/period_q_10" BEL "pwm0/pwm_ctrl/period_q_9" BEL
+        "pwm0/pwm_ctrl/period_q_8" BEL "pwm0/pwm_ctrl/period_q_7" BEL
+        "pwm0/pwm_ctrl/period_q_6" BEL "pwm0/pwm_ctrl/period_q_5" BEL
+        "pwm0/pwm_ctrl/period_q_4" BEL "pwm0/pwm_ctrl/period_q_3" BEL
+        "pwm0/pwm_ctrl/period_q_2" BEL "pwm0/pwm_ctrl/period_q_1" BEL
+        "pwm0/pwm_ctrl/period_q_0" BEL "mem_0/ram0/Mram_RAM1_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM1_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM10_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM10_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM100_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM100_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM101_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM101_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM102_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM102_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM103_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM103_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM104_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM104_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM105_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM105_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM106_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM106_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM107_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM107_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM108_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM108_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM109_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM109_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM11_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM11_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM110_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM110_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM111_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM111_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM112_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM112_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM113_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM113_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM114_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM114_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM115_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM115_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM116_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM116_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM117_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM117_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM118_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM118_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM119_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM119_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM12_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM12_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM120_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM120_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM121_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM121_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM122_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM122_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM123_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM123_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM124_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM124_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM125_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM125_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM126_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM126_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM127_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM127_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM128_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM128_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM129_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM129_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM13_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM13_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM130_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM130_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM131_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM131_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM132_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM132_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM133_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM133_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM134_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM134_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM135_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM135_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM136_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM136_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM137_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM137_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM138_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM138_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM139_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM139_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM14_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM14_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM140_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM140_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM141_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM141_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM142_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM142_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM143_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM143_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM144_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM144_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM145_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM145_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM146_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM146_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM147_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM147_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM148_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM148_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM149_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM149_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM15_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM15_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM150_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM150_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM151_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM151_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM152_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM152_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM153_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM153_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM154_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM154_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM155_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM155_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM156_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM156_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM157_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM157_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM158_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM158_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM159_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM159_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM16_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM16_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM160_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM160_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM161_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM161_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM162_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM162_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM163_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM163_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM164_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM164_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM165_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM165_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM166_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM166_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM167_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM167_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM168_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM168_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM169_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM169_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM17_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM17_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM170_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM170_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM171_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM171_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM172_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM172_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM173_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM173_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM174_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM174_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM175_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM175_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM176_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM176_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM177_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM177_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM178_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM178_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM179_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM179_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM18_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM18_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM180_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM180_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM181_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM181_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM182_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM182_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM183_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM183_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM184_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM184_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM185_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM185_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM186_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM186_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM187_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM187_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM188_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM188_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM189_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM189_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM19_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM19_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM190_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM190_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM191_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM191_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM192_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM192_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM193_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM193_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM194_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM194_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM195_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM195_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM196_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM196_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM197_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM197_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM198_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM198_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM199_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM199_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM2_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM2_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM20_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM20_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM200_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM200_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM201_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM201_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM202_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM202_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM203_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM203_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM204_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM204_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM205_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM205_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM206_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM206_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM207_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM207_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM208_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM208_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM209_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM209_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM21_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM21_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM210_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM210_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM211_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM211_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM212_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM212_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM213_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM213_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM214_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM214_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM215_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM215_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM216_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM216_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM217_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM217_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM218_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM218_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM219_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM219_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM22_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM22_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM220_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM220_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM221_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM221_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM222_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM222_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM223_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM223_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM224_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM224_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM225_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM225_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM226_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM226_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM227_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM227_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM228_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM228_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM229_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM229_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM23_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM23_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM230_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM230_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM231_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM231_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM232_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM232_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM233_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM233_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM234_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM234_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM235_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM235_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM236_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM236_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM237_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM237_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM238_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM238_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM239_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM239_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM24_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM24_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM240_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM240_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM241_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM241_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM242_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM242_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM243_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM243_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM244_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM244_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM245_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM245_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM246_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM246_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM247_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM247_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM248_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM248_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM249_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM249_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM25_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM25_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM250_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM250_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM251_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM251_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM252_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM252_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM253_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM253_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM254_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM254_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM255_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM255_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM256_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM256_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM26_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM26_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM27_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM27_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM28_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM28_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM29_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM29_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM3_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM3_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM30_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM30_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM31_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM31_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM32_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM32_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM33_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM33_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM34_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM34_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM35_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM35_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM36_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM36_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM37_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM37_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM38_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM38_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM39_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM39_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM4_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM4_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM40_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM40_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM41_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM41_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM42_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM42_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM43_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM43_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM44_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM44_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM45_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM45_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM46_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM46_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM47_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM47_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM48_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM48_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM49_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM49_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM5_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM5_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM50_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM50_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM51_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM51_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM52_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM52_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM53_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM53_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM54_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM54_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM55_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM55_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM56_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM56_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM57_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM57_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM58_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM58_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM59_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM59_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM6_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM6_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM60_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM60_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM61_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM61_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM62_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM62_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM63_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM63_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM64_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM64_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM65_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM65_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM66_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM66_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM67_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM67_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM68_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM68_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM69_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM69_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM7_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM7_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM70_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM70_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM71_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM71_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM72_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM72_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM73_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM73_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM74_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM74_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM75_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM75_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM76_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM76_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM77_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM77_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM78_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM78_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM79_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM79_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM8_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM8_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM80_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM80_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM81_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM81_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM82_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM82_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM83_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM83_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM84_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM84_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM85_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM85_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM86_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM86_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM87_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM87_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM88_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM88_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM89_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM89_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM9_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM9_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM90_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM90_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM91_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM91_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM92_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM92_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM93_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM93_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM94_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM94_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM95_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM95_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM96_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM96_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM97_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM97_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM98_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM98_Narrowed/HIGH" BEL
+        "mem_0/ram0/Mram_RAM99_Narrowed/LOW" BEL
+        "mem_0/ram0/Mram_RAM99_Narrowed/HIGH";
+PIN PLL_BASE_inst/PLL_ADV_pins<2> = BEL "PLL_BASE_inst/PLL_ADV" PINNAME
+        CLKIN1;
+TIMEGRP clk50_grp = BEL "BUFG_1" PIN "PLL_BASE_inst/PLL_ADV_pins<2>";
+TS_PER_CLK50 = PERIOD TIMEGRP "clk50_grp" 20 ns HIGH 50%;
+TS_PER_CLK32 = PERIOD TIMEGRP "clk32_grp" 20 ns HIGH 50%;
+TS_clk_100Mhz_pll = PERIOD TIMEGRP "clk_100Mhz_pll" TS_PER_CLK50 / 2 HIGH 50%;
+SCHEMATIC END;
+

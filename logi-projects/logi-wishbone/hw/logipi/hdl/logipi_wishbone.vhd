@@ -104,7 +104,7 @@ architecture Behavioral of logipi_wishbone is
 
 -- registers signals
 	signal loopback_sig, signal_input, signal_output : std_logic_vector(15 downto 0);
-	signal dummy_sig0, dummy_sig1 : std_logic_vector(15 downto 0);
+	signal s_reg0,s_reg1,s_reg2,s_reg3,s_reg4,s_reg5,s_reg6,s_reg7: std_logic_vector(15 downto 0);
 	signal dummy_pwm0 : std_logic ;
 begin
 
@@ -187,7 +187,7 @@ intercon_wrapper_wbm_ack	<= intercon_register_wbm_ack when reg_cs = '1' else
 										  
 -----------------------------------------------------------------------
 register0 : wishbone_register
-	generic map(nb_regs => 4)
+	generic map(nb_regs => 8)
 	 port map
 	 (
 		  -- Syscon signals
@@ -203,16 +203,24 @@ register0 : wishbone_register
 		  wbs_ack       => intercon_register_wbm_ack,
 		 
 		  -- out signals
-		  reg_out(0) =>dummy_sig0,
-		  reg_out(1) => dummy_sig1,
-		  reg_out(2) => loopback_sig,
-		  reg_out(3) => signal_output,
+		  reg_out(0) => s_reg0,
+		  reg_out(1) => s_reg1,
+		  reg_out(2) => s_reg2,
+		  reg_out(3) => s_reg3,
+		  reg_out(4) => s_reg4,
+		  reg_out(5) => s_reg5,
+		  reg_out(6) => s_reg6,
+		  reg_out(7) => s_reg7,
 		 
-		  reg_in(0) => X"DEAD",
-		  reg_in(1) => X"BEEF",
+		  reg_in(0) => s_reg0,
+		  reg_in(1) => s_reg1,
 		  -- out signals
-		  reg_in(2) => loopback_sig,		  
-		  reg_in(3) => signal_input
+		  reg_in(2) => s_reg2,
+		  reg_in(3) => s_reg3,
+		  reg_in(4) => s_reg4,
+		  reg_in(5) => s_reg5,
+  		  reg_in(6) => s_reg6,
+  		  reg_in(7) => s_reg7		  
 	 );
 	
 	
